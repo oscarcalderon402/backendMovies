@@ -11,7 +11,7 @@ function moviesApi(app) {
   router.get('/', async function (req, res, next) {
     const { tags } = req.query;
     try {
-      const movies = await moviesService.getMovie({ tags });
+      const movies = await moviesService.getMovies({ tags });
       res.status(200).json({
         data: movies,
         message: 'movies listed',
