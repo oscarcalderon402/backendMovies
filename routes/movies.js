@@ -18,6 +18,7 @@ function moviesApi(app) {
       });
     } catch (error) {
       console.log(error);
+      next(error);
     }
   });
 
