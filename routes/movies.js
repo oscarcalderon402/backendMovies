@@ -8,7 +8,7 @@ const {
   updateMovieSchema,
 } = require('../utils/schemas/movies');
 
-const validationHandler = require('../utils/middleware/validationHandler');
+const validationHandler = require('../utils/middleware/validationHandlers');
 
 function moviesApi(app) {
   const router = express.Router();
