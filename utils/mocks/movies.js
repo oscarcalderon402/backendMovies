@@ -1512,4 +1512,14 @@ const moviesMock = [
   },
 ];
 
-module.exports = { moviesMock };
+function filteredMoviesMock(tag) {
+  return moviesMock.filter((movie) => movie.tags.includes(tag));
+}
+
+class MoviesServicesMock {
+  async getMovies() {
+    return Promise.resolve(moviesMock);
+  }
+}
+
+module.exports = { moviesMock, filteredMoviesMock, MoviesServicesMock };
